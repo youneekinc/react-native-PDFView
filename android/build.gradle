@@ -12,12 +12,12 @@ apply plugin: 'com.android.library'
 
 
 android {
-    compileSdkVersion safeExtGet('compileSdkVersion')
-    buildToolsVersion safeExtGet('buildToolsVersion')
+    compileSdk safeExtGet('compileSdkVersion')
+    buildToolsVersion = safeExtGet('buildToolsVersion')
 
     defaultConfig {
-        minSdkVersion safeExtGet('minSdkVersion')
-        targetSdkVersion safeExtGet('targetSdkVersion')
+        minSdk safeExtGet('minSdkVersion')
+        targetSdk safeExtGet('targetSdkVersion')
     }
     lintOptions {
         abortOnError false
